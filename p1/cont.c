@@ -26,4 +26,7 @@ int main() {
     printf ("Tong cac so duong = %d\n", sum);
     printf ("So phan tu duong = %d\n", k);
     printf ("Phan tu duong lon nhat = %d\n", max);
+printf ("%d", sizeof (long));
+printf ("\nShort = %d bytes\n", sizeof (short));
+printf ("%d", sizeof (long double));
 }

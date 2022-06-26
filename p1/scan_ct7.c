@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include "stdlib.h"
 int main()
 {
     char s1[10], s2[10], s3[20], s4[20];

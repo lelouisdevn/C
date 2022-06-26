@@ -25,4 +25,7 @@ int main() {
         }
         printf ("\n");
     }
+
+    int b[5][5], c[10], *p;
+    p = c;
 }
