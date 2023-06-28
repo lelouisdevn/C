@@ -10,5 +10,5 @@ int main(){
     // printf ("Address of variable \"value\" stored in \"pointer\": %x\n", pointer);
     // printf ("Value of the variale which pointer store: %d", *pointer);
 
-    printf ("%x", pointer);
+    printf ("%d\n", (int) pointer);
 }

@@ -15,8 +15,11 @@ int main()
     // printf("%d%ld", a, b);
 
     double f; // int f
-    // this variable is a double but stores an int data, so error occurs.
-    // you ask for solution? -> change f to int.
-    scanf ("%f", &f); 
-    printf ("%f", f);
+    /**
+     * 'f' is a double variable but stored as a float that leads to errors
+     * change format specifier for scanf function to 'lf' which mean 'long float'
+     * and cast double to float when printing if we prefer to do that or use 'lf' instead.
+    */
+    scanf ("%lf", &f);  // scanf("%f", &f);
+    printf ("%.2f", (float) f);
 }

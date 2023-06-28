@@ -14,6 +14,9 @@ int main() {
     //     }
     // }
 
+    /**
+     * Sort the array ascendingly
+    */
     int a[] = {10, 5, 2, 1, 5, 9};
     int length = sizeof (a) / sizeof (a[0]); //6
     int p, q;
@@ -31,6 +34,10 @@ int main() {
         printf ("%d ", a[p]);
     }
 
+    /**
+     * Find max value between two numbers with 
+     * expression in printf function
+    */
     int c = 5, b = 7;
     printf ("Max is %d", c>b?c:b);
 

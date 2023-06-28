@@ -21,5 +21,5 @@ int main() {
     char str[] = "Computer";
     puts(str);
 
-    //clrscr(); this belongs to conio.h
+    //clrscr(); this belongs to conio.h which is not a standard C library
 }

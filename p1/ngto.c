@@ -2,18 +2,18 @@
 #include "math.h"
 
 int main() {
-    int n;
-    int isNT = 1;
-    scanf ("%d", &n);
-    for (int i = 2; i <= sqrt(n); i++){
-        if (n % i == 0){
-            isNT = 0;
-            break;
+    int num;
+    scanf("%d", &num);
+    int s = 0;
+    for (int i=2; i<num; i++) {
+        if (num % i == 0) {
+            s = 1;
         }
     }
-    if (isNT) {
-        printf ("%d la so nguyen to!\n", n);
+
+    if (s==0) { 
+        printf ("La so nguyen to");
     }else {
-        printf ("%d khong la so nguyen to!\n", n);
+        printf ("Ko la so nguyen to");
     }
 }

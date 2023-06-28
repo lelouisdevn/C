@@ -6,7 +6,7 @@ int main() {
     ptr = a;
     int n = 5;
     for (ptr=a; ptr<a + (n); ptr++){
-        printf ("%.0f ", *(ptr));
+        printf ("%.2f ", *(ptr));
     }
 
     unsigned int c = 0xABCDEF;
@@ -25,8 +25,9 @@ int main() {
     sum = 10485760 + 720896 + 49152 + 3328 + 224 + 15 = 11259375
 
     */
-    printf ("%d", c); //11259375
+    printf ("\n");
+    printf ("\n %d", c); //11259375
     printf ("\n %x", *d);
     printf ("\n %x", *(d+1));
-    printf ("\n %x", *(d + 2));
+    printf ("\n %x\n", *(d + 2));
 }
