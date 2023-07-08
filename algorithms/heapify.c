@@ -1,4 +1,5 @@
 #include "stdio.h"
+void swap(int*, int*);
 void swap(int *a, int *b) {
     int temp = *a;
     *a = *b;
@@ -25,12 +26,19 @@ int main() {
     for (int i=(n-2)/2; i>=0; i--) {
         heapify(a, i, n);
     }
+
+    // Function name is an address constant;
+    // use heapify or &heapify to get its address;
+    void (*toH)(int*, int, int) = heapify;
+    void (*arr[])(int*, int*) = {swap};
     for (int j=n-1; j>=0; j--) {
-        swap(a+0, a+j);
-        heapify(a, 0, j);
+        // swap(a+0, a+j);
+        arr[0](a,a+j);
+        // heapify(a, 0, j);
+        toH(a, 0, j);
     }
 
     for (int i = 0; i<n; i++) {
-        printf("%d ", *(a+i));
+        printf("%d: %d\n", i+1, *(a+i));
     }
 }
