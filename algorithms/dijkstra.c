@@ -42,11 +42,13 @@ int main()
                        };
 
     printf ("Graph: \n");
+    int *pa = (int*)graph;
     for (int i = 0; i < V; i++)
     {
         for (int j = 0; j < V; j++)
         {
-            printf("%d ", *(*(graph + i) + j));
+            // printf("%d ", *(*(graph + i) + j));
+            printf ("%d ", *(pa + i*V + j));
         }
         printf("\n");
     }
