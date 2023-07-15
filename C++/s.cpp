@@ -30,14 +30,14 @@ void print(struct Stack S) {
 int isEmpty(Stack S) {
     return S.index==-1;
 }
-int main() {
-    struct Stack S;
-    initStack(&S);
-    push(&S, 3);
-    push(&S, 7);
-    push(&S, 4);
-    print(S);
-    cout << "after pop: ";
-    pop(&S);
-    print(S);
-}
+// int main() {
+//     struct Stack S;
+//     initStack(&S);
+//     push(&S, 3);
+//     push(&S, 7);
+//     push(&S, 4);
+//     print(S);
+//     cout << "after pop: ";
+//     pop(&S);
+//     print(S);
+// }

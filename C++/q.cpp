@@ -43,16 +43,16 @@ void print(Queue Q) {
     }
 }
 
-int main() {
-    Queue Q;
-    initQueue(&Q);
-    push(&Q, 3);
-    push(&Q, 8);
-    push(&Q, 7);
-    push(&Q, 5);
-    pop(&Q);
-    push(&Q, 4);
-    push(&Q, 6);
-    print(Q); // 8 7 5 4 6
-    cout << "\n";
-}
+// int main() {
+//     Queue Q;
+//     initQueue(&Q);
+//     push(&Q, 3);
+//     push(&Q, 8);
+//     push(&Q, 7);
+//     push(&Q, 5);
+//     pop(&Q);
+//     push(&Q, 4);
+//     push(&Q, 6);
+//     print(Q); // 8 7 5 4 6
+//     cout << "\n";
+// }
