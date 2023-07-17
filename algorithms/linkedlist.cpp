@@ -58,6 +58,19 @@ void printArray(struct Node *node) {
         start = start->next;
     }
 }
+
+// Delete the node after it; 
+void deleteNode (struct Node **start, int X) {
+   struct Node* found = search(start, X);
+   if (found->next == NULL) {
+    cout << "This is the end node\n";
+   }else {
+    struct Node* temp = found->next;
+    found->next = found->next->next;
+    free(temp);
+   }
+    
+}
 int main() {
     // Create a head with initial value of NULL;
     struct Node *head = (struct Node*)malloc(sizeof(struct Node));
@@ -80,4 +93,9 @@ int main() {
 
     cout << "\nArray after insert after " << n << ": \n";
     printArray(head);
+
+    deleteNode(&head, 8);
+    cout << "\n";
+    printArray(head);
+    // cout << head->data;
 }
