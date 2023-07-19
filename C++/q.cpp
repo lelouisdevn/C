@@ -1,8 +1,8 @@
 #include "iostream"
 
 using namespace std;
-#define N 6
-typedef int eType;
+#define N 10
+typedef void* eType;
 typedef struct {
     eType data[N];
     int front, rear;

@@ -1,18 +1,19 @@
 #include "iostream"
 using namespace std;
-#define N 5
+#define SN 10
+typedef void* eType;
 struct Stack {
-    int data[N];
+    eType data[SN];
     int index;
 };
 void initStack(struct Stack *S) {
     S->index = -1;
 }
-void push(struct Stack *S, int X) {
+void push(struct Stack *S, eType X) {
     if (S->index == -1) {
         S->index = 0;
         S->data[S->index] = X;
-    }else if (S->index + 1 == N) cout << "Full\n"; 
+    }else if (S->index + 1 == SN) cout << "Full\n"; 
     else {
         S->index++;
         S->data[S->index] = X;
