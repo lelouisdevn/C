@@ -18,11 +18,17 @@ class Vehicle {
             cout << "Ten hang: " << name << "\n";
             cout << "Mau: " << color << "\n";
         }
+        void setBrandName(string brand) {
+            this->name = brand;
+        }
 };
 class Car: public Vehicle {
     private:
         int sl;
     public:
+        Car() {
+            sl = 20;
+        }
         Car(string c, string n, int num) : Vehicle(c, n) {
             this->sl = num;
         }
@@ -30,9 +36,15 @@ class Car: public Vehicle {
             Vehicle::print();
             cout << "So luong: " << sl << "\n";
         }
+        void setName(string name) {
+            Vehicle::setBrandName(name);
+        }
 
 };
 int main() {
-    Car RR("blue", "Roll Royce", 15);
-    RR.printA();
+    // Car RR("blue", "Roll Royce", 15);
+    // RR.printA();
+    Car cars[5];
+    cars[0].setName("Roll Royce");
+    cars[0].printA();
 }
