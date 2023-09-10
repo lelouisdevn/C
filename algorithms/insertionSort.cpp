@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-    int a[] = {4, 7, 8, 3, 10, 6, 4, 2, 11, 1, 7, 5};
+    int a[] = {10, 3, 5, 7, 9, 4, 2};
     int size = sizeof(a) / sizeof(*a);
     for (int i=1; i<size; i++) {
         int j = i;

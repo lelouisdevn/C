@@ -32,6 +32,13 @@ void dijkstra(int a[][V], int start)
         }
     }
 }
+// void callf(void (*dj) (int[][V], int), int start, int a[][V]) {
+//     // (*dj)(a, start);
+//     dijkstra(a, start);
+// }
+void calln(int start, int a[][V]) {
+    dijkstra(a,start);
+}
 int main()
 {
     int graph[V][V] = {{0, 6, 0, 1, 0},
@@ -52,7 +59,9 @@ int main()
         }
         printf("\n");
     }
-    dijkstra(graph, 0);
+    // dijkstra(graph, 0);
+    // callf(dijkstra, 0, graph);
+    calln(0, graph);
     printf ("Shortest path from src to other nodes: \n");
     for (int i=0; i<V; i++) {
         printf ("%d ", dist[i]);

@@ -5,7 +5,7 @@ int sqr(int x){
 };
 
 void inX(int (*p) (int), int y) {
-    int a = sqr(y);
+    int a = p(y);
     printf ("%d", a);
 };
 
@@ -30,13 +30,13 @@ int main() {
 
     int i;
     int j;
-    for (i=0, j=0; i<5; ++i){
-        int y, z;
-        printf ("Nhập x và y: ");
-        scanf ("%d%d", &y, &z);
-        printf ("max %d va %d = %d\n", y, z, f[j](y, z));
-    }
-    //inX(sqr, 7);
+    // for (i=0, j=0; i<5; ++i){
+    //     int y, z;
+    //     printf ("Nhập x và y: ");
+    //     scanf ("%d%d", &y, &z);
+    //     printf ("max %d va %d = %d\n", y, z, f[j](y, z));
+    // }
+    inX(sqr, 7);
 
     //printf ("%d", tang(3, 4));
 

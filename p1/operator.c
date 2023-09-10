@@ -1,5 +1,5 @@
 #include "stdio.h"
-#include <math.h>
+#include "math.h"
 
 int main()
 {
@@ -23,9 +23,9 @@ int main()
 
     printf("\n");
 
-    int v = 25;
+    float v = 25;
     // gcc operator.c -o opt -lm
-    printf("%f", sqrt((double)v));
+    printf("%f", (float)sqrt(v));
 
     int n1 = 5;
     int x = n1++;

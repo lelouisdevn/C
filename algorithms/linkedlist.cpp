@@ -69,7 +69,8 @@ void deleteNode (struct Node **start, int X) {
     found->next = found->next->next;
     free(temp);
    }
-    
+    // (*start) = (*start)->next;
+    // (*start) = (*start)->next;
 }
 int main() {
     // Create a head with initial value of NULL;

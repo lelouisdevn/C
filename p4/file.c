@@ -20,6 +20,6 @@ int main() {
     
     strcat (cwd, dir);
     printf ("%s", cwd);
-    mkdir (cwd);
+    // mkdir (cwd);
     
 }
