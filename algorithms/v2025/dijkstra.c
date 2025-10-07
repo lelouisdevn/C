@@ -3,14 +3,15 @@
 #include "stdio.h"
 #define V 5
 
-int Graph[V][V] =
+/*int Graph[V][V] =
     {
         {0, 6, 0, 1, 0},
         {6, 0, 5, 2, 2},
         {0, 5, 0, 0, 5},
         {1, 2, 0, 0, 1},
         {0, 2, 5, 1, 0},
-};
+};*/
+int Graph[V][V];
 
 int visited[V];
 int distance[V];
@@ -72,12 +73,38 @@ int pathFromSrcToDest(int Graph[][V], int dest, int *path)
     }
     return idx;
 }
+int openGraphFromTextFile(char *filename)
+{
+    FILE *f = fopen(filename, "r");
+    if (f == NULL)
+        return 0;
+
+    int vertices;
+    fscanf(f, "%d", &vertices);
+    
+    for (int i=0; i<vertices; i++)
+    {
+        /* w is weight between a and b */
+        int a, b, w;
+        fscanf(f, "%d%d%d", &a, &b, &w);
+        Graph[a][b] = w;
+        printf ("Adding node [%d][%d] to Graph with weight [%d]\n", a, b, w);
+    }
+    return 1;
+}
 
 int main()
 {
-    int dest = 2;
-    int start = 0;
-    Dijkstra(Graph, start);
+    char * fileName = "path.txt";
+    int result = openGraphFromTextFile(fileName);
+    if (!result)
+    {
+        printf ("Fail to open file [%s]\n", fileName);
+        return -1;
+    }
+
+    int srcNode = 0;
+    Dijkstra(Graph, srcNode);
 
     for (int i = 1; i < V; i++)
     {
@@ -92,3 +119,9 @@ int main()
         printf ("\n");
     }
 }
+
+
+/*  Limitation:
+ *  There is no Graph struct, so we cannot keep track of the number of vertices and nodes effectively
+ *  In this version, let us say we have a fixed 5 nodes and vertices specified in file first
+*/
