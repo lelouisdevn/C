@@ -1,7 +1,7 @@
 /* Thai Ngo - Oct 5 2025 - 11:10 */
 
 #include "stdio.h"
-#define STATIC_STACK_SIZE 3
+#define STATIC_STACK_SIZE 10
 #define NEGATIVE_STACK_INDICATOR -1
 
 typedef struct stack 
@@ -34,19 +34,22 @@ void pushToStack(Stack* s, int value)
     }
 }
 
-void getFromStack(Stack *s)
+int getFromStack(Stack *s)
 {   
     if (s->indicator <= NEGATIVE_STACK_INDICATOR)
     {
-        printf ("STACK is empty. Cannot print data in this state\n");
+        //printf ("STACK is empty. Cannot print data in this state\n");
     }
     else
     {
-        printf ("%d ", s->data[s->indicator--]);
+        //printf ("%d ", s->data[s->indicator--]);
+        int returnVal = s->data[s->indicator];
+        s->indicator--;
+        return returnVal;
     }
 }
 
-int main()
+/*int main()
 {
     Stack * s;
     initStack(s);
@@ -62,4 +65,4 @@ int main()
     getFromStack(s);
 
     printf ("%d", s->indicator);
-}
+}*/
