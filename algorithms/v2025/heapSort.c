@@ -22,6 +22,11 @@ void buildMaxHeap(int *a, int e, int s)
     int r = 2*e + 2;
     int max = e;
 
+    /**
+     * l < s ensures we stop checking if the next leaf is not a real leaf 
+     * due to operation int l = 2*e + 1 and int r = 2*e + 2
+     * that could exceed the array
+    */
     if (l < s && a[l] > a[max]) max = l;
     if (r < s && a[r] > a[max]) max = r;
 
